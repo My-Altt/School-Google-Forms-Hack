@@ -1,27 +1,11 @@
-chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-  const tab = tabs[0];
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: getQuestions,
+// Get the questions from the background script and display them
+chrome.runtime.getBackgroundPage((backgroundPage) => {
+  const questions = backgroundPage.questions;
+  const questionsDiv = document.getElementById('questions');
+  questionsDiv.innerHTML = '';
+  questions.forEach((question, index) => {
+    const questionElement = document.createElement('div');
+    questionElement.textContent = `Question ${index + 1}: ${question}`;
+    questionsDiv.appendChild(questionElement);
   });
-});
-
-function getQuestions() {
-  const questions = [];
-  // Replace this with code to extract questions from the Google Doc
-  // Example: const text = document.body.innerText; // Extract text content
-  // Use regular expressions or specific parsing logic to find questions
-  // Push questions into the 'questions' array
-  chrome.runtime.sendMessage({ questions });
-}
-
-chrome.runtime.onMessage.addListener(function (message) {
-  if (message.questions && message.questions.length > 0) {
-    const questionsContainer = document.getElementById("questions-container");
-    message.questions.forEach((question, index) => {
-      const questionDiv = document.createElement("div");
-      questionDiv.innerText = `${index + 1}. ${question}`;
-      questionsContainer.appendChild(questionDiv);
-    });
-  }
 });
