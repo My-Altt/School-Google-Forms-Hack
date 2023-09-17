@@ -6,7 +6,8 @@
 
 1. Clone Repo or Download Zip
 
-![0mepmnsme5n2ladav5mp](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/a0e57501-2adc-44af-ba87-702c745a6e97)
+![Instruction#1](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/d810e611-5cee-4dcb-8714-5cdb4f64e8ae)
+
 
 2. Visit chrome://extensions/ and turn on "Developer mode"
 
