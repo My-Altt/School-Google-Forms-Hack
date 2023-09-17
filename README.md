@@ -3,6 +3,7 @@
 NOTE: This extension has been designed exclusively for educational purposes. As the creator, I wish to make it clear that I cannot be held accountable in the event of any misconduct involving this extension, including academic dishonesty. Furthermore, I do not assume responsibility for a student's utilization of this extension.
 
 HOW TO USE:
+
 1. Clone Repo or Download Zip
 
 ![0mepmnsme5n2ladav5mp](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/a0e57501-2adc-44af-ba87-702c745a6e97)
