@@ -1,42 +1,27 @@
-function attachEventListeners() {
-    let startQuesRadio = document.getElementById('startQues');
-    startQuesRadio.addEventListener('click', () => startQuesRadio.select());
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  const tab = tabs[0];
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: getQuestions,
+  });
+});
 
-    document.getElementById('endQuesRadio').addEventListener('click', () => {
-        let lastQuesRadio = document.getElementById('lastQuesRadio');
-        lastQuesRadio.checked = false;
-        let fieldText = document.getElementById('endQuesField');
-        fieldText.select();
-    });
-
-    let textField = document.getElementById('endQuesField');
-    textField.addEventListener('click', () => {
-        let lastQuesRadio = document.getElementById('lastQuesRadio');
-        lastQuesRadio.checked = false;
-        let endQuesRadio = document.getElementById('endQuesRadio');
-        endQuesRadio.checked = true;
-        textField.select();
-    });
-
-    document.getElementById('lastQuesRadio').addEventListener('click', () => {
-        let endQuesRadio = document.getElementById('endQuesRadio');
-        endQuesRadio.checked = false;
-    })
+function getQuestions() {
+  const questions = [];
+  // Replace this with code to extract questions from the Google Doc
+  // Example: const text = document.body.innerText; // Extract text content
+  // Use regular expressions or specific parsing logic to find questions
+  // Push questions into the 'questions' array
+  chrome.runtime.sendMessage({ questions });
 }
 
-attachEventListeners();
-
-let form = document.querySelector("form");
-
-form.addEventListener("submit", function (event, activeTab) {
-    try {
-        const data = new FormData(form);
-        const startQues = parseInt(data.get("startQues"));
-        const endQues = parseInt(data.get("endQues"));
-        const lastQues = data.get("lastQues");
-
-        if (Math.min(startQues, endQues) < 1 || startQues > endQues) {
-            throw new Error('Invalid range');
-        }
-
-}
+chrome.runtime.onMessage.addListener(function (message) {
+  if (message.questions && message.questions.length > 0) {
+    const questionsContainer = document.getElementById("questions-container");
+    message.questions.forEach((question, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.innerText = `${index + 1}. ${question}`;
+      questionsContainer.appendChild(questionDiv);
+    });
+  }
+});
