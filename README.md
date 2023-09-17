@@ -6,7 +6,7 @@
  
 This extension was initially created to determine if it was feasible to extract questions from Google Forms and transmit them to an AI bot API, akin to ChatGPT's API. This project began with the data collection phase, and in version 2, I successfully sent the first questions to the AI and received responses via the Google extension. Moving forward, my goal is to automate the form-filling process based on the answers provided by the AI chatbot.
 
-## HOW TO USE:
+## How To Use:
 
 1. Clone Repo or Download Zip
 
