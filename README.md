@@ -11,15 +11,17 @@
 
 2. Visit chrome://extensions/ and turn on "Developer mode"
 
-![34fjjva60v7t8wmamwxp](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/eb09a83c-ccba-4ef9-bb22-c684df7ffcb0)
+![Instrucion #2](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/7ea3f042-5e6d-48a4-8bab-3ac31e53c5c3)
+
 
 3. Click "Load unpacked" button and navivigate to the folder you downloaded from GitHub
 
-![rnvn7pz11hjaif8ss4eh](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/1dea9b5f-dad3-4f37-b366-eedc92045369)
+![Instruction #3](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/b4ab2968-4a77-489c-9fa8-443dff3050ad)
 
 Done!
 If you pull down new changes or make a change to the extension's files locally, you'll need to hit the "refresh" icon in chrome://extensions/ in order to run the new functionality...
 
-![drsz19hsqzg2tit7rfly](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/3be0274b-f74a-4e9d-91c5-a6421bed8842)
+![Instruction #4](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/44512596-fc34-437a-bf82-cc2ecbdd417f)
+
 
 Directions from: https://dev.to/ben/how-to-install-chrome-extensions-manually-from-github-1612 By Ben Halpern
