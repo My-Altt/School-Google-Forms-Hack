@@ -22,6 +22,3 @@ Done!
 If you pull down new changes or make a change to the extension's files locally, you'll need to hit the "refresh" icon in chrome://extensions/ in order to run the new functionality...
 
 ![Instruction #4](https://github.com/My-Altt/School-Google-Forms-Hack/assets/101564533/44512596-fc34-437a-bf82-cc2ecbdd417f)
-
-
-Directions from: https://dev.to/ben/how-to-install-chrome-extensions-manually-from-github-1612 By Ben Halpern
